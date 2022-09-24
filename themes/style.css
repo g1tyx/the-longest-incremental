@@ -1,0 +1,520 @@
+:root { /* theme stuff */
+  --font: "Lato",sans-serif;
+  --font-color: #012D40;
+  --bg: #719dcc;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--font-color);
+  text-align: center;
+}
+#bg {
+  background: var(--bg)
+}
+#ver {
+	position: fixed;
+	top: 0;
+	right: 0;
+	text-align: right;
+	opacity: 0.5
+}
+#dev {
+	transition-duration: 3s
+}
+
+div, table {
+  margin: auto;
+	text-align: center;
+}
+h1, h2, h3 {
+  color: #003f7f
+}
+.tab {
+  display: none;   
+}
+/* challenges tab */
+#chadiv {
+  position: relative;
+  width: 80%;
+}
+#chas {
+  position: absolute;
+  width: 240px;
+  left: 0;
+}
+#chadescdiv {
+  position: absolute;
+  width: calc(100% - 240px);
+  right: 0;
+  text-align: right
+}
+#chatitle {
+  font-size: 24px
+}
+/* dark tab */
+.darkOverwrite, .darkOverwrite *:not(button):not(button > *):not(input) {
+  position: relative;
+  z-index: 1;
+  color: #dfbfff;
+  text-shadow: 0 0 3px #7f00ff
+}
+#dark_bg {
+  z-index: -99999;
+  position: fixed;
+  background: black;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%
+}
+#dark_block {
+  z-index: 99999;
+  position: fixed;
+  background: transparent;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  transition-duration: 2s
+}
+#dark_sym_div {
+  position: absolute;
+  opacity: 0.5;
+  top: calc(50% - 400px);
+  left: calc(50% - 400px);
+  width: 800px;
+  height: 800px;
+  animation: spin 30s linear infinite;
+}
+#dark_sym {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+
+  background-image: url("https://cdn.glitch.global/a8bae54f-d7d3-4a51-8ee6-6fbadebe03a5/dark_world_icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@keyframes fade {
+  0% {
+    opacity: 1
+  }
+  50% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0
+  }
+}
+@keyframes spin {
+  from {transform: rotate3d(0.7, 0.3, 2, 0deg)}
+  to {transform: rotate3d(0.7, 0.3, 2, 360deg)}
+}
+@keyframes spinAni {
+  from {transform: rotate(0deg); opacity: 1}
+  to {transform: rotate(36000deg); opacity: 0}
+}
+
+.darkRecall {
+  width: 120px;
+  background: #df7fff;
+  border: 2px solid #0000003f
+}
+.darkRecall.curr {
+  background: #dfbfff;
+}
+.darkRecall.fuse {
+  background: #df00ff;
+}
+.darkRecall b {
+  color: white;
+}
+#recallResources td {
+  height: 42px;
+  vertical-align: 0.5;
+}
+/* specific tab button styling */
+#stab_btn_main_upgrades {
+  background-color: #c8ffc8;
+}
+#stab_btn_main_milestones, #stab_btn_stats_l1, #boosterconfirm, #respecconfirm {
+  background-color: #c8ffff;
+}
+#tabs button {
+  width: 110px;
+  height: 30px;
+  border-radius: 15px;
+  display: table-row
+}
+.stab button {
+  width: 90px;
+  height: 25px;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.spoiler {
+  color: black;
+  background: black;
+  user-select: none;
+  border-radius: 5px;
+}
+.spoiler:active {
+  background: inherit;
+  color: inherit;
+}
+
+.number {
+  position: absolute;
+  left: 20%;
+}
+
+#stab_btn_main_consume, #consumeconfirm {
+  color: #ffffff;
+  background-color: #6900aa;
+}
+#tab_btn_auto {
+  color: #ffffff;
+  background-color: #00a81c;
+}
+#stab_btn_settings_lore {
+  color: #ffffff;
+  background-color: #b06621;
+}
+#tab_btn_dark, #stab_btn_stats_l2, #darkconfirm {
+  color: #bbbbbb;
+  background-color: #000000;
+}
+#tab_btn_chal {
+  color: #ffffff;
+  background-color: #fb0;
+}
+#tab_btn_ach {
+  color: #ffffff;
+  background-color: #0077ff;
+}
+#tab_btn_settings, #stab_btn_settings_main, #tab_btn_stats, #stab_btn_settings_credits, #stab_btn_settings_changelog {
+  color: #ffffff;
+  background-color: #333333;
+}
+#hardreset {
+  color: #ffffff;
+  background-color: #ff6464;
+}
+#notificationarea {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+}
+.notification {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  margin: 6px;
+  padding: 2px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  z-index: 1;
+}
+/* shamelessly taken from w3schools */
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 7% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888888;
+  width: 88%; /* Could be more or less, depending on screen size */
+  overflow: auto;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: 2px solid #0000007f;
+  border-radius: 5px;
+  padding: 6px;
+  font-family: var(--font);
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+button:hover, #discord:hover {
+  transform: scale(1.05);
+}
+button:active, #discord:active {
+  transform: scale(1);
+}
+button.hover:hover {
+  transform: scale(1.05) !important;
+}
+
+.upgbutton { /* size was decided by *some* discussions*/
+  height: 32px;
+  width: 205px;
+  border-radius: 10px;
+  font-size: 12px;
+	vertical-align: top;
+}
+.u { /* size was decided by *some* discussions*/
+  height: 110px;
+  width: 216px;
+  border-radius: 10px;
+  font-size: 12px; /*this does matter as upg button and u are different*/
+	vertical-align: top;
+}
+.buildimg {
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.buildboosttext{
+  font-size: 7px;
+}
+.canbuy {
+  background-color: #f9ea62;
+}
+.bought {
+  background-color: #4ca361;
+}
+.cannotbuy {
+  background-color: #f37078;
+}
+.prestige1 {
+  background-color: #87d3e7;
+}
+.prestige2 {
+  background-color: #2f2f2f;
+  color: #6f6f6f;
+}
+button.bought:hover, button.cannotbuy:hover {
+  transform: scale(1)
+}
+
+.ach {
+	border-radius: 12px;
+	font-size: 12px;
+	width: 90px;
+	height: 90px;
+	border: 2px solid #0000003f
+}
+.ach.completed {
+  background-color: #4ca361
+}
+.ach.rowDone {
+  background-color: gold
+}
+.ach.allDone {
+  background: linear-gradient(#ffdf00, #ffffbf, #bfff00);
+  box-shadow: 0 0 6px #ffbf00
+}
+
+.milestones td {
+  padding: 0;
+}
+#abilities {
+  width: 100%;
+  text-align: right
+}
+
+/* MISC */
+#musicBox {
+  position: fixed;
+  z-index: 2;
+  left: 12px;
+  height: 120px;
+  transition: all 1s ease;
+  bottom: -90px
+}
+#musicBoxOpen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 24px;
+}
+#musicBoxDiv {
+  position: absolute;
+  top: 30px;
+  width: 240px;
+  height: 96px;
+
+  background: white;
+  border: 2px solid #0000007f;
+  border-radius: 5px;
+  padding: 6px;
+}
+#musicId {
+  color: black
+}
+
+.credits {
+  width: 140px;
+  height: 25px;
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+#discord {
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+#updatebox {
+  position: fixed;
+  z-index: 2;
+  border-radius: 12px;
+  width: 360px;
+  height: 240px;
+  top: calc(50% - 180px);
+  left: calc(50% - 120px);
+  background: black;
+  color: white;
+  display: none
+}
+
+#layerunlock {
+  display: none;
+  transition-duration: 1.5s;
+
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#layerbg {
+  background: linear-gradient(#bfbfff7f, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#layerbar {
+  background: #ffffffbf;
+  box-shadow: 0 0 6px white;
+  color: #3f3fff;
+  text-shadow: 0 0 6px #3f3fff;
+  position: absolute;
+  top: calc(50% - 60px);
+  left: 0;
+  width: 100%;
+  height: 54px;
+}
+#layernum {
+  font-size: 24px
+}
+#layerdismiss {
+  width: 100%;
+  height: 24px;
+
+  position: absolute;
+  bottom: 0;
+
+  color: #3f3fff;
+  text-shadow: 0 0 6px #3f3fff;
+}
+#layerflash {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: 2s flash linear;
+}
+@keyframes flash {
+  0% {
+    background: white
+  }
+  50% {
+    background: transparent
+  }
+  100% {
+    background: transparent
+  }
+}
+
+#news_ticker_base {
+  width: 100%;
+  height: 30px;
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #000000;
+  border: solid;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#news_ticker {
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+
+li span {
+  position: relative;
+  left: -10px;
+} /* im adding random shit :cart_troll: */
+
+/* fixes */
+button h1, button h2, button h3 {
+  color: black
+}
