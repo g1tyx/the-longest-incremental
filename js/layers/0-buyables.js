@@ -112,7 +112,7 @@ const buyables = {
     confirm() {
       if (!(player.boost?.confirm ?? true)) return true;
       return confirm(
-        "This will reset your progress for a booster, which doubles point gain. Are you sure?"
+        "这将重置您的助推器进度，使点数增益翻倍。 你确定吗？"
       );
     },
     onBuy() {
@@ -439,10 +439,10 @@ function setupUpgradeBuyables() {
             class="upgbutton cannotbuy" 
             onclick="buyBuyable(${key})">
             ${key == 3 ? "(B) " : ""}
- 	              Cost: 
+ 	              成本: 
             <span
              id="buyableCost${key}"></span> 
-            points
+            点数
           </button>
         </td>
         <td><div id="buyableBoostDiv${key}">
