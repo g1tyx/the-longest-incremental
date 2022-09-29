@@ -209,7 +209,7 @@ var cnItems = {
     "Factory: Starts at ": "工厂：开始于",
     "Features:": "特征：",
     "FlamemasterNXF": "火焰大师NXF",
-    "For every": "给大家",
+    "For every": "每",
     "forward": "向前",
     "Fusing will lose resources needed, and will gain products in\n          exchange.": "融合将失去所需的资源，并会获得\n交换的产品。",
     "Gain 3x more Points.": "获得 3 倍以上的点数。",
