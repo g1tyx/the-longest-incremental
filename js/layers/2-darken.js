@@ -2,7 +2,7 @@ const DARK_REQ = Decimal.exp(100);
 const DARKEN = (LAYERS[2] = {
   name: "Darken",
   pharse: "Darken the sun.",
-  confirm: "It's your choice. Are you willing to go with the Dark?",
+  confirm: "这是你的选择。 你愿意与黑暗同行吗？",
   reward: "Booster Enhancements, Dark Upgrades, Rediscovery, Trivial Mode",
   ani: layer2Animation,
 
